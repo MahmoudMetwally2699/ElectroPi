@@ -161,16 +161,28 @@ export default function HomePage() {
         .cta-text p { color: var(--text-muted); }
         @media (max-width: 1024px) { .features-grid { grid-template-columns: repeat(2,1fr); } .categories-grid { grid-template-columns: repeat(4,1fr); } }
         @media (max-width: 768px) {
-          .hero-content { grid-template-columns: 1fr; text-align: center; }
-          [dir="rtl"] .hero-content { text-align: center; }
+          .hero { min-height: auto; padding-top: 70px; padding-bottom: 2rem; }
+          .hero-content { grid-template-columns: 1fr; text-align: center; padding: 2rem 1rem; gap: 1.5rem; }
           .hero-image { display: none; }
-          .hero-btns { align-items: center; }
-          .products-grid { grid-template-columns: 1fr 1fr; }
-          .categories-grid { grid-template-columns: repeat(3,1fr); }
-          .cta-inner { flex-direction: column; text-align: center; }
-          .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+          .hero-title { font-size: clamp(1.6rem, 7vw, 2.4rem); }
+          .hero-sub { font-size: 0.92rem; margin: 0 auto 1.25rem; }
+          .hero-btns { align-items: center; gap: 1rem; width: 100%; }
+          .hero-btns .btn { width: 100%; max-width: 300px; justify-content: center; }
+          .hero-stats { flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+          .products-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+          .categories-grid { grid-template-columns: repeat(3,1fr); gap: 0.65rem; }
+          .cat-card { height: 95px; }
+          .cta-section { padding: 2rem 0; }
+          .cta-inner { flex-direction: column; text-align: center; padding: 2rem 1.25rem; gap: 1.25rem; }
+          .cta-text h2 { font-size: 1.35rem; }
+          .section-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; margin-bottom: 1.25rem; }
+          .features-section { padding: 1.5rem 0; }
         }
-        @media (max-width: 480px) { .products-grid { grid-template-columns: 1fr; } .categories-grid { grid-template-columns: repeat(2,1fr); } .features-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 480px) {
+          .products-grid { grid-template-columns: 1fr; }
+          .categories-grid { grid-template-columns: repeat(2,1fr); }
+          .features-grid { grid-template-columns: 1fr; gap: 0.65rem; }
+        }
       `}</style>
     </div>
   );

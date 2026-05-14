@@ -192,9 +192,21 @@ select.form-control option { background: var(--bg-card); }
 [dir="rtl"] .ms-auto { margin-left: unset; margin-right: auto; }
 [dir="rtl"] .me-auto { margin-right: unset; margin-left: auto; }
 
-/* Responsive */
+/* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
-  .section { padding: 3rem 0; }
-  .section-title { font-size: 1.5rem; }
+  .container { padding: 0 1rem; }
+  .section { padding: 2.5rem 0; }
+  .section-title { font-size: 1.4rem; }
+  .section-sub { margin-bottom: 1.5rem; }
   .hide-mobile { display: none !important; }
+  .btn-lg { padding: 0.75rem 1.5rem; font-size: 0.95rem; }
+  /* Full-width buttons on mobile when inside a column */
+  .auth-page .btn { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 0.85rem; }
+  .section-title { font-size: 1.25rem; }
+  .form-control { font-size: 16px; } /* prevents iOS zoom */
+  .btn { font-size: 0.88rem; }
 }
